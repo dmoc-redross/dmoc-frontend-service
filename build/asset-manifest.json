@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2eb4c8cd.css",
+    "main.js": "/static/js/main.49e617e0.js",
+    "static/js/70.a60502ee.chunk.js": "/static/js/70.a60502ee.chunk.js",
+    "static/js/24.95489fe1.chunk.js": "/static/js/24.95489fe1.chunk.js",
+    "static/js/968.9d0dd7c4.chunk.js": "/static/js/968.9d0dd7c4.chunk.js",
+    "static/js/748.75eec1dc.chunk.js": "/static/js/748.75eec1dc.chunk.js",
+    "static/js/896.df0b13d7.chunk.js": "/static/js/896.df0b13d7.chunk.js",
+    "static/js/804.b1714e4b.chunk.js": "/static/js/804.b1714e4b.chunk.js",
+    "static/media/DMOR_LOGO.svg": "/static/media/DMOR_LOGO.6d499138a5bec430b0d48c09ee8970aa.svg",
+    "static/media/rewards_img.png": "/static/media/rewards_img.9d91b018a31e6706a911.png",
+    "static/media/page-not-found.png": "/static/media/page-not-found.ec5345765bedf66fc777.png",
+    "static/media/refer.svg": "/static/media/refer.fea2995c6eec5b83fc84662c40ed725d.svg",
+    "static/media/card_medal.svg": "/static/media/card_medal.17e3253dd5e664f9892382cbebc665cd.svg",
+    "static/media/metamask.svg": "/static/media/metamask.26f55c9ac0d7af112aa64c544b29b4da.svg",
+    "static/media/level.svg": "/static/media/level.b52b5180ec7c1a95ad9f0ef56a9a1e29.svg",
+    "static/media/right_flag.svg": "/static/media/right_flag.67c61492bed65943eb67ef08e75e5bf5.svg",
+    "static/media/left_flage.svg": "/static/media/left_flage.9a7dee5762416646c50651c448dcb4a2.svg",
+    "static/media/stake-card-bg.svg": "/static/media/stake-card-bg.14c7ed8ced93f2872d21.svg",
+    "index.html": "/index.html",
+    "static/media/wallet-connect.svg": "/static/media/wallet-connect.b186060f2ca802a4e19e54712b8099b0.svg",
+    "static/media/referal-and-earn-bg.svg": "/static/media/referal-and-earn-bg.464336c22a435966be38.svg",
+    "static/media/cross-icon.svg": "/static/media/cross-icon.8109f0eb8d3aba9153f7.svg",
+    "static/media/stake-card-lines.svg": "/static/media/stake-card-lines.df014aa0d32e7f4eab76.svg",
+    "static/media/search-icon.svg": "/static/media/search-icon.204b93e36bcfdb4c45fcd1f3edb61ed4.svg",
+    "static/media/select_arrow.svg": "/static/media/select_arrow.908f7181fa87d73dd804.svg"
+  },
+  "entrypoints": [
+    "static/css/main.2eb4c8cd.css",
+    "static/js/main.49e617e0.js"
+  ]
+}

@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  static_build:
+    build:
+      context: './dmoc-docker'
+      dockerfile: Dockerfile
+    container_name: Dmoc-prod
+    restart: unless-stopped
+    ports:
+      - 3000:3000
