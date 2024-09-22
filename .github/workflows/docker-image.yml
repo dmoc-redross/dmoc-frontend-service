@@ -1,0 +1,43 @@
+name: Docker Image dnoc-frontend-service
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install AWS CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Get Runner IP
+      id: runner_ip
+      run: echo "::set-output name=ip::$(curl -s ifconfig.me)"
+
+    - name: Login to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 235494793335.dkr.ecr.us-east-1.amazonaws.com
+        
+    - name: Docker Build
+      run: |
+       docker build -t dmoc-frontend-service .
+    - name: Docker Tag
+      run: |
+        docker tag dmoc-frontend-service:latest 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+    - name: Docker Push
