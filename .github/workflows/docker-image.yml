@@ -1,4 +1,4 @@
-name: Docker Image dnoc-frontend-service
+name: Docker Image dmoc-frontend-service
 on:
   push:
     branches:
@@ -36,12 +36,12 @@ jobs:
         
     - name: Docker Build
       run: |
-        docker build -t dnoc-frontend-service .
+        docker build -t dmoc-frontend-service .
     
     - name: Docker Tag
       run: |
-        docker tag dnoc-frontend-service:latest 235494793335.dkr.ecr.us-east-1.amazonaws.com/dnoc-frontend-service:${{ github.run_id }}
+        docker tag dmoc-frontend-service:latest 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
 
     - name: Docker Push
       run: |
-        docker push 235494793335.dkr.ecr.us-east-1.amazonaws.com/dnoc-frontend-service:${{ github.run_id }}
+        docker push 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
