@@ -1,0 +1,207 @@
+name: Docker Image dmoc-frontend-service
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install AWS CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Get Runner IP
+      id: runner_ip
+      run: echo "::set-output name=ip::$(curl -s ifconfig.me)"
+
+    - name: Login to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 235494793335.dkr.ecr.us-east-1.amazonaws.com
+        
+    - name: Docker Build
+      run: |
+        docker build -t dmoc-frontend-service .
+    
+    - name: Docker Tag
+      run: |
+        docker tag dmoc-frontend-service:latest 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+
+    - name: Docker Push
+      run: |
+        docker push 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+name: Docker Image dmoc-frontend-service
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install AWS CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Get Runner IP
+      id: runner_ip
+      run: echo "::set-output name=ip::$(curl -s ifconfig.me)"
+
+    - name: Login to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 235494793335.dkr.ecr.us-east-1.amazonaws.com
+        
+    - name: Docker Build
+      run: |
+        docker build -t dmoc-frontend-service .
+    
+    - name: Docker Tag
+      run: |
+        docker tag dmoc-frontend-service:latest 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+
+    - name: Docker Push
+      run: |
+        docker push 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+name: Docker Image dmoc-frontend-service
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install AWS CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Get Runner IP
+      id: runner_ip
+      run: echo "::set-output name=ip::$(curl -s ifconfig.me)"
+
+    - name: Login to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 235494793335.dkr.ecr.us-east-1.amazonaws.com
+        
+    - name: Docker Build
+      run: |
+        docker build -t dmoc-frontend-service .
+    
+    - name: Docker Tag
+      run: |
+        docker tag dmoc-frontend-service:latest 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+
+    - name: Docker Push
+      run: |
+        docker push 235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
+name: Docker Image backend-user
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install AWS CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Get Runner IP
+      id: runner_ip
+      run: echo "::set-output name=ip::$(curl -s ifconfig.me)"
+
+    - name: Login to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 211125596502.dkr.ecr.us-east-1.amazonaws.com
+        
+    - name: Docker Build
+      run: |
+        docker build -t stage-backend-api .
+    - name: Docker Tag
+      run: |
+        docker tag stage-backend-api:latest 211125596502.dkr.ecr.us-east-1.amazonaws.com/stage-backend-api:${{ github.run_id }}
+    - name: Docker Push
+      run: |
+        docker push 211125596502.dkr.ecr.us-east-1.amazonaws.com/stage-backend-api:${{ github.run_id }}
+
+    - name: Modify Security Group SOURCE_IMAGE
+      run: |
+        aws ec2 authorize-security-group-ingress --group-id sg-0fd5e42a1330f54ba  --ip-permissions "IpProtocol=tcp,FromPort=22,ToPort=22,IpRanges=[{CidrIp=${{ steps.runner_ip.outputs.ip }}/32,Description=\"Allowing Github Actions IP\"}]"
+      
+    - name: SSH into AWS EC2 and run script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          cd /home/ubuntu/frontend/dmoc-frontend-service
+          export IMAGE_NAME_FRONTEND=211125596502.dkr.ecr.us-east-1.amazonaws.com/stage-backend-api:${{ github.run_id }}
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 211125596502.dkr.ecr.us-east-1.amazonaws.com
+          docker-compose down && docker system prune -af && docker-compose up -d
+
+    - name: Revoke Security Group
+      run: |
+        aws ec2 revoke-security-group-ingress --group-id sg-0fd5e42a1330f54ba --ip-permissions "IpProtocol=tcp,FromPort=22,ToPort=22,IpRanges=[{CidrIp=${{ steps.runner_ip.outputs.ip }}/32,Description=\"Allowing Github Actions IP\"}]"
