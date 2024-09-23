@@ -59,7 +59,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd /home/ubuntu/frontend/dmoc-frontend-service
-          export IMAGE_NAME_FRONTEND=211125596502.dkr.ecr.us-east-1.amazonaws.com/stage-backend-api:${{ github.run_id }}
+          export IMAGE_NAME_FRONTEND=235494793335.dkr.ecr.us-east-1.amazonaws.com/dmoc-frontend-service:${{ github.run_id }}
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 235494793335.dkr.ecr.us-east-1.amazonaws.com
           docker-compose down && docker system prune -af && docker-compose up -d
 
