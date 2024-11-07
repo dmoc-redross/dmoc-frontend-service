@@ -1,0 +1,44 @@
+@import "../../../assets/theme/_var.scss";
+
+.button {
+  color: $textClr;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 4rem;
+  padding: 1.3rem 2.15rem;
+  background: $btnGradient;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1679px) {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+  }
+
+  &:disabled {
+    background: $secondary6;
+    color: rgba($white, 0.5);
+    cursor: not-allowed;
+  }
+  // &.lightblue{
+  //   background: $lightblue;
+  // }
+
+  &.borderbtn {
+    background: transparent;
+    border: 0.1rem solid #e4c36a;
+  }
+
+  :global {
+    .buttonIcon {
+      margin-right: 0.75rem;
+    }
+  }
+}

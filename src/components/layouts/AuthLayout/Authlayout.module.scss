@@ -1,0 +1,48 @@
+@import "../../../assets/theme/_var.scss";
+
+.layout {
+  padding-left: 25.2rem;
+  min-height: 100vh;
+  background: $secondary8;
+  background-image: url(../../../assets/images/inner_bg.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  &_outer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  &_in {
+    padding: 14.1rem 3.7rem 2.3rem;
+    position: relative;
+    z-index: 1;
+    flex: 1 0 auto;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+
+    @media (max-width: 1679px) {
+      padding: 10.5rem 2rem 2rem;
+    }
+
+    @media (max-width: 1199px) {
+      padding: 2.5rem;
+    }
+  }
+
+  @media (max-width: 1439px) {
+    padding-left: 24rem;
+  }
+
+  @media (max-width: 1199px) {
+    padding-left: 0;
+  }
+
+  @media (max-width: 575px) {
+    &_in {
+      padding: 1.8rem;
+    }
+  }
+}

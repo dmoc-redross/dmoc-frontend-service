@@ -1,0 +1,26 @@
+@import "../../../assets/theme/_var.scss";
+
+.footer {
+  text-align: center;
+  font-weight: 600;
+  padding: 2.35rem 0;
+  flex-shrink: 0;
+
+  @media (max-width: 767px) {
+    padding: 1.5rem 0;
+  }
+
+  p {
+    font-size: 1.4rem;
+
+    @media (max-width: 767px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__inner {
+    padding: 1.95rem 0;
+    background-color: #14307f;
+    font-weight: 500;
+  }
+}

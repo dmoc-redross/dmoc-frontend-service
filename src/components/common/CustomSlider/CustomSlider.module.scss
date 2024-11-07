@@ -1,0 +1,31 @@
+@import "../../../assets/theme/_var.scss";
+
+.slider {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2.9rem;
+  &_thumb {
+    background: radial-gradient(
+      123.76% 123.76% at 50% 50%,
+      #fff2c0 0%,
+      rgba(255, 255, 255, 1) 14.04%,
+      rgba(245, 218, 118, 0) 100%
+    );
+
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &_tooltip {
+    position: absolute;
+    bottom: -2.1rem;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}

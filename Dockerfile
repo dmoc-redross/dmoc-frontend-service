@@ -1,23 +1,30 @@
-# Stage 1: Build
-FROM node:16-alpine as builder
+#FROM node:16-alpine
+#WORKDIR /src
+#COPY package*.json ./
+#RUN npm install --force
+#COPY . .
+#RUN npm run build
+#EXPOSE 3000
+#CMD ["npm", "run", "start"]
 
-WORKDIR /app
+FROM node:16.13.0 as builder
 
-COPY package.json .
+WORKDIR /app/src
+
+COPY package*.json ./
+
 RUN npm install --force
 
 COPY . .
 
-# Add any build steps if needed
-# For example, you might run a build command like: RUN npm run build
+RUN npm run build:production
 
-# Stage 2: Create a smaller final image
-FROM node:16-alpine
+# Stage 2: Create the production image
+FROM nginx:alpine
 
-WORKDIR /app
+COPY --from=builder /app/src/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app .
+EXPOSE 80
 
-EXPOSE 3000
-
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]

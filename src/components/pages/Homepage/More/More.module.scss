@@ -1,0 +1,25 @@
+@import "../../../../assets/theme/_var.scss";
+
+.moreSec {
+  background: linear-gradient(
+    90deg,
+    #223a7c 0.32%,
+    #3946a1 22.72%,
+    #1a2e80 46.47%,
+    #2b508d 65.75%,
+    #0b325f 84.33%,
+    #1c273d 99.63%
+  );
+  padding: 13rem 0;
+
+  @media (max-width: 1679px) {
+    padding: 10rem 0;
+  }
+  @media (max-width: 1439px) {
+    padding: 7rem 0;
+  }
+
+  @media (max-width: 575px) {
+    padding: 4rem 0;
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../../assets/theme/_var.scss";
+
+:global {
+  .modal-backdrop.show {
+    background: rgba(0, 23, 68, 0.82) !important;
+    opacity: 1;
+  }
+}
+
+.customModal {
+  :global {
+    .modal-dialog {
+      padding: 0 1rem;
+      max-width: 41.5rem;
+
+      @media (max-width: 991px) {
+        max-width: 32rem;
+        margin: 0 auto;
+      }
+    }
+    .modal-content {
+      border-radius: 1.2rem;
+      background: $secondary6;
+      padding: 2.4rem;
+
+      @media (max-width: 767px) {
+        padding: 1.5rem;
+      }
+    }
+
+    .modal-header {
+      padding: 0 0 2.4rem;
+      border: 0;
+
+      @media (max-width: 767px) {
+        padding-bottom: 1.5rem;
+      }
+
+      .modal-title {
+        line-height: 0.8;
+        font-size: 2rem;
+        font-weight: 600;
+
+        @media (max-width: 1679px) {
+          font-size: 1.8rem;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      .btn-close {
+        width: 1.4rem;
+        height: 1.4rem;
+        padding: 0;
+        opacity: 1;
+        background-image: url(../../../assets/icons/close.svg);
+        background-size: 100%;
+
+        @media (max-width: 1199px) {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+
+        @media (max-width: 767px) {
+          width: 1rem;
+          height: 1rem;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    .modal-body {
+      padding: 0;
+
+      .inner {
+        input {
+          background: #0e3485;
+        }
+      }
+    }
+  }
+}

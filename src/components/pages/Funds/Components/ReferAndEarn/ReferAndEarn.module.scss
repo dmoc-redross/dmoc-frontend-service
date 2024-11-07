@@ -1,0 +1,71 @@
+@import "../../../../../assets/theme/_var.scss";
+
+.refer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  @media (max-width: 1439px) {
+    flex-direction: column;
+  }
+  &__img {
+    // position: absolute;
+    // left: 2.6rem;
+
+    @media (max-width: 1439px) {
+      max-width: 18rem;
+    }
+    @media (max-width: 575px) {
+      max-width: 15rem;
+    }
+  }
+
+  &__content {
+    padding-top: 3.5rem;
+    padding-right: 4.6rem;
+    position: relative;
+    z-index: 1;
+    margin-left: -2rem;
+
+    @media (max-width: 1679px) {
+      padding-right: 2.6rem;
+    }
+    @media (max-width: 1439px) {
+      padding-top: 2rem;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    h4 {
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 1.4rem;
+      @media (max-width: 1679px) {
+        margin-bottom: 0.8rem;
+      }
+      @media (max-width: 575px) {
+        margin-bottom: 0.4rem;
+      }
+    }
+    .sky_price {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      @media (max-width: 1439px) {
+        justify-content: center;
+      }
+      h5 {
+        font-size: 1.8rem;
+        @media (max-width: 1679px) {
+          font-size: 1.6rem;
+        }
+      }
+      span {
+        margin-top: 0.4rem;
+        margin-left: 0.8rem;
+        color: $primary;
+      }
+    }
+  }
+}

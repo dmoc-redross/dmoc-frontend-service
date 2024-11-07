@@ -1,0 +1,98 @@
+@import "../../../assets/theme/_var.scss";
+
+@keyframes loader-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 11111;
+  background-color: rgba($black, 0.15);
+  backdrop-filter: blur(7px);
+  transition: all ease-in-out 0.3s;
+  > div{
+    svg{
+      width:14rem !important;
+      height: 14rem !important;
+    }
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    // animation: blink 1s ease-in-out infinite alternate;
+  }
+
+//   @keyframes blink {
+//     0% {
+//       transform: perspective(400px) rotateY(0);
+//       animation-timing-function: ease-out;
+//   }
+//   40% {
+//       transform: perspective(400px) translateZ(150px) rotateY(170deg);
+//       animation-timing-function: ease-out;
+//   }
+//   50% {
+//       transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+//       animation-timing-function: ease-in;
+//   }
+//   80% {
+//       transform: perspective(400px) rotateY(360deg) scale(.95);
+//       animation-timing-function: ease-in;
+//   }
+//   100% {
+//       transform: perspective(400px) scale(1);
+//       animation-timing-function: ease-in;
+//   }
+// }
+
+// &__spinner {
+//   border: 0 solid transparent;
+//   border-radius: 50%;
+//   position: relative;
+//   display: inline-block;
+//   width: 5rem;
+//   height: 5rem;
+//   color: inherit;
+//   vertical-align: middle;
+//   pointer-events: none;
+//   &:before,
+//   &:after {
+//     content: "";
+//     border: 0.5rem solid $primary;
+//     border-radius: 50%;
+//     width: inherit;
+//     height: inherit;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     animation: loader-animation 1s linear infinite;
+//     opacity: 0;
+//   }
+//   &:before {
+//     animation-delay: 1s;
+//   }
+//   &:after {
+//     animation-delay: 0.5s;
+//   }
+// }
+}

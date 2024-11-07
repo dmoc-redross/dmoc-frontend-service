@@ -1,0 +1,21 @@
+@import "../../../assets/theme/_var.scss";
+
+.customTooltip {
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-arrow-width: 1.2rem;
+  --bs-tooltip-arrow-height: 0.8rem;
+  :global {
+    .tooltip-inner {
+      background-color: $secondary;
+      padding: 1rem 2.5rem;
+      font-size: 1.6rem;
+    }
+
+    .tooltip-arrow {
+      &::before {
+        // border-bottom-color: $secondary;
+        border-top-color: $secondary;
+      }
+    }
+  }
+}

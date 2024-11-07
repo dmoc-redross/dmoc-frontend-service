@@ -1,0 +1,106 @@
+@import "../../../../../assets/theme/_var.scss";
+
+.advantage {
+  padding-bottom: 13rem;
+  @media (max-width: 1679px) {
+    padding-bottom: 9rem;
+  }
+  @media (max-width: 1439px) {
+    padding-bottom: 5rem;
+  }
+  &__card {
+    border-radius: 2.4rem;
+    background: linear-gradient(180deg, #4878bc 0%, rgba(5, 5, 32, 0) 100%);
+    transition: all ease-in-out 0.25s;
+    padding: 4.5rem 4.8rem;
+    margin: 0 0.8rem;
+    height: 100%;
+
+    @media (max-width: 1679px) {
+      padding: 3.5rem 4rem;
+    }
+    @media (max-width: 1439px) {
+      padding: 2.5rem 3rem;
+    }
+    @media (max-width: 575px) {
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+    }
+
+    &:hover {
+      background: $gradient;
+    }
+
+    &__top {
+      margin-bottom: 1.7rem;
+      display: flex;
+      align-items: center;
+      @media (max-width: 1679px) {
+        margin-bottom: 1.2rem;
+      }
+
+      span {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1.7rem;
+        border-radius: 1.2rem;
+        background: linear-gradient(
+          294.59deg,
+          #f6db79 -16.43%,
+          #8f5322 155.85%
+        );
+
+        @media (max-width: 1679px) {
+          width: 4.2rem;
+          height: 4.2rem;
+          margin-right: 1.2rem;
+        }
+        @media (max-width: 575px) {
+          width: 3.2rem;
+          height: 3.2rem;
+          margin-right: 0.75rem;
+        }
+
+        svg {
+          @media (max-width: 1679px) {
+            max-width: 1.8rem;
+            max-height: 2rem;
+          }
+          @media (max-width: 575px) {
+            max-width: 1.4rem;
+            max-height: 1.6rem;
+          }
+        }
+      }
+      h5 {
+        font-weight: 600;
+        background: linear-gradient(302deg, #f6db79 41.5%, #8f5322 170.38%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        text-transform: capitalize;
+        @media (max-width: 1439px) {
+          font-size: 1.6rem;
+        }
+        @media (max-width: 575px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 2.2rem;
+
+      @media (max-width: 1679px) {
+        line-height: 1.8rem;
+      }
+    }
+  }
+}

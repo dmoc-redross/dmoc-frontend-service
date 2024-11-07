@@ -1,0 +1,45 @@
+@import "../../../assets/theme/_var.scss";
+
+.copy_element {
+  color: $white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+
+  @media (max-width: 1439px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 1.2rem;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &_btn {
+    cursor: pointer;
+    // background-color: $secondary3;
+    border-radius: 5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -0.1rem;
+    right: -2.6rem;
+    left: 0;
+    margin-left: 0.6rem;
+  }
+
+  &_btndisabled {
+    cursor: auto;
+  }
+}

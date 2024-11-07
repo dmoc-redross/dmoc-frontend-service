@@ -1,0 +1,80 @@
+@import "../../../../../assets/theme/_var.scss";
+
+.deposit {
+  text-align: center;
+
+  h4 {
+    margin-bottom: 1.2rem;
+  }
+  :global{
+    .package{
+      color: $red;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__slider {
+    max-width: 47rem;
+    margin: 0 auto 4.2rem;
+
+    @media (max-width: 575px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__btn {
+    max-width: 10rem;
+    width: 100%;
+    margin: 0.8rem 1.6rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1.2rem;
+    background: $secondary6;
+    color: rgba($white, 0.8);
+    font-size: 1.6rem;
+    color: $primary;
+    font-weight: 600;
+    border: 0.1rem solid transparent;
+    transition: all linear 0.2s;
+
+    @media (max-width: 1679px) {
+      padding: 1rem;
+      font-size: 1.4rem;
+    }
+
+    // @media (max-width: 1439px) {
+    //   max-width: 6.5rem;
+    // }
+    @media (max-width: 1679px) {
+      padding: 1rem;
+      font-size: 1.5rem;
+      max-width: 8rem;
+    }
+
+    @media (max-width: 767px) {
+      // padding: 0.5rem;
+      // font-size: 1.2rem;
+      max-width: calc(100% - 1.2rem);
+      border-radius: 0.8rem;
+      margin: 0.6rem;
+    }
+
+    @media (max-width: 575px) {
+      padding: 1rem 0.5rem;
+    }
+
+    &:hover,
+    &__active {
+      border-color: $primary;
+      // color: $white;
+    }
+  }
+
+  &__actionBtn {
+    min-width: 17.8rem;
+    justify-content: center;
+
+    @media (max-width: 1679px) {
+      min-width: 15rem;
+    }
+  }
+}

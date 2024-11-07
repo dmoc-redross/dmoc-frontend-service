@@ -1,0 +1,215 @@
+@import "../../../../assets/theme/_var.scss";
+
+.homepage {
+  background-size: cover;
+  min-height: 100dvh;
+  padding-top: 13rem;
+  padding-bottom: 5.1rem;
+  position: relative;
+
+  @media (max-width: 1679px) {
+    padding-top: 9.5rem;
+    padding-bottom: 4rem;
+  }
+
+  :global {
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__rocket {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    @media (max-width: 991px) {
+      position: relative;
+      top: -30px;
+      left: -25%;
+    }
+
+    @media (max-width: 575px) {
+      top: -50px;
+      left: -25%;
+    }
+
+    >div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__cont {
+    margin-bottom: 2.7rem;
+
+    // @media (max-width: 1679px) {
+    //   margin-bottom: 10rem;
+    // }
+    // @media (max-width: 1439px) {
+    //   margin-bottom: 7rem;
+    // }
+
+    @media (max-width: 991px) {
+      margin-top: -120px;
+    }
+
+    @media (max-width: 575px) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.heroContent {
+  padding-top: 8.4rem;
+  max-width: 81rem;
+
+  @media (max-width: 1679px) {
+    padding-top: 4rem;
+    max-width: 75rem;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  :global {
+    .row {
+      margin: 0 -1.125rem;
+
+      @media (max-width: 1439px) {
+        margin: 0 -0.75rem;
+      }
+
+      >div {
+        padding: 0 1.125rem;
+
+        @media (max-width: 1439px) {
+          padding: 0 0.75rem;
+        }
+
+        .textcolor {
+          // color: $red;
+          background: linear-gradient(352deg, #f6db79 31.5%, #FF0000 103.38%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  &__top {
+    display: inline-block;
+    border-radius: 3.6rem;
+    border-bottom: 0.2rem solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg,
+        rgba(35, 72, 162, 0) 2.52%,
+        #619dd4 34.79%,
+        #619dd4 50.02%,
+        rgba(34, 63, 159, 0) 90.3%);
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    margin-bottom: 4rem;
+    background: linear-gradient(194deg, transparent -9.28%, transparent 54.1%),
+      linear-gradient(130deg,
+        transparent 0,
+        transparent 94%,
+        transparent 93%,
+        $primary 97%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    @media (max-width: 1679px) {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 1rem 2.5rem 1rem 0;
+    }
+  }
+
+  &__middle {
+    margin-bottom: 5rem;
+
+    @media (max-width: 1679px) {
+      margin-bottom: 4rem;
+    }
+
+    &__heading {
+      h1 {
+        margin-bottom: 1.9rem;
+        position: relative;
+        display: inline-block;
+
+        @media (max-width: 575px) {
+          font-size: 2.4rem;
+        }
+
+        @media (max-width: 479px) {
+          font-size: 1.8rem;
+        }
+
+        span {
+          color: $primary2 !important;
+        }
+
+        small {
+          position: absolute;
+          width: 3.1rem;
+          height: 3.1rem;
+          bottom: 2.5rem;
+          right: -3.5rem;
+
+          @media (max-width: 1679px) {
+            bottom: 1rem;
+          }
+
+          @media (max-width: 1439px) {
+            width: 2rem;
+            height: 2rem;
+            right: -2.5rem;
+          }
+
+          @media (max-width: 575px) {
+            width: 1.6rem;
+            right: -2rem;
+          }
+
+          // @media (max-width: 425px) {
+          //   display: none;
+          // }
+        }
+      }
+    }
+
+    h6 {
+      line-height: 2.8rem;
+      font-weight: 400;
+
+      @media (max-width: 1679px) {
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .walletadd_card {
+    margin-top: 3rem;
+  }
+}
+
+//

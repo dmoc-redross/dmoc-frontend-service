@@ -1,0 +1,136 @@
+@import "../../../../assets/theme/_var.scss";
+
+.mainCard {
+  border-radius: 8.5rem 8.5rem 2.4rem 2.4rem;
+  background: linear-gradient(
+    179deg,
+    #72c7ff -17.21%,
+    rgba(30, 57, 142, 0) 80%
+  );
+  padding: 0rem 0.6rem 2.1rem;
+  text-align: center;
+  position: relative;
+  min-height: 20.9rem;
+  // min-height: 16.9rem;
+
+  @media (max-width: 1439px) {
+    border-radius: 6rem 6rem 2rem 2rem;
+    padding: 0rem 0.5rem 1.5rem;
+    min-height: 14.9rem;
+  }
+
+  @media (max-width: 575px) {
+    max-width: 28rem;
+    margin: 0 auto 2rem;
+  }
+
+  &:hover {
+    background: $gradient;
+  }
+
+  &::before {
+    content: "";
+    width: 34rem;
+    height: 13.9rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 34rem;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(68, 91, 151, 0) 100%
+    );
+    top: -5rem;
+
+    @media (max-width: 991px) {
+      width: 20rem;
+      height: 8rem;
+      top: -3rem;
+    }
+    @media (max-width: 575px) {
+      width: 15rem;
+      height: 5rem;
+      top: -2rem;
+    }
+  }
+
+  &__icon {
+    width: 6.6rem;
+    height: 6.6rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(17, 52, 116, 0.4) 0%,
+      rgba(53, 95, 171, 0) 100%
+    );
+    // margin-bottom: -1rem;
+
+    @media (max-width: 1679px) {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+
+    svg {
+      @media (max-width: 1679px) {
+        max-width: 3rem;
+        max-height: 3rem;
+      }
+    }
+  }
+  &__content {
+    // display: flex;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    .cardtotal_text {
+      // width: 50%;
+      // @media (max-width: 1440px) {
+      //   width: 45%;
+      // }
+      // @media (max-width: 1199px) {
+      //   width: 50%;
+      // }
+    }
+    .cardtotal_pending {
+      position: relative;
+      margin-bottom: 1rem;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 5rem;
+        height: 0.2rem;
+        background-color: white;
+        left: 50%;
+        bottom: -4.5px;
+        transform: translateX(-50%);
+        // @media (max-width: 1440px) {
+        //   left: -2px;
+        // }
+      }
+      p {
+        padding-left: 0.5rem;       
+      }
+      h3 {
+       
+        &::after {
+          top: 28px;
+          background-color: $primary;
+        }
+      }
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 2.1rem;
+    }
+  }
+}

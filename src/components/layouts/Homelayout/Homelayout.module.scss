@@ -1,0 +1,60 @@
+@import "../../../assets/theme/_var.scss";
+
+.home_layout {
+  min-height: 100vh;
+
+  .header {
+    background: transparent;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all linear 0.25s;
+
+    &_in {
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 1439px) {
+        padding: 1.2rem 0;
+      }
+
+      @media (max-width: 575px) {
+        padding: 0.8rem 0;
+      }
+    }
+
+    :global {
+      .logo {
+        transition: all linear 0.25s;
+
+        @media (max-width: 1679px) {
+          max-width: 7rem;
+        }
+        @media (max-width: 575px) {
+          max-width: 4.5rem;
+        }
+      }
+    }
+
+    &__scrolled {
+      background-color: rgba($white, 0.1);
+      transition: all linear 0.25s;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 1rem 1.4rem rgba(255, 255, 255, 0.06);
+
+      :global {
+        .logo {
+          max-width: 7rem;
+
+          @media (max-width: 575px) {
+            max-width: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+}

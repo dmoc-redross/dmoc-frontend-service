@@ -1,0 +1,59 @@
+@import '../../../assets/theme/_var.scss';
+
+.reward_charts {
+    :global {
+        .row {
+            @media (max-width:767px) {
+                row-gap: 1.5rem;
+            }
+        }
+    }
+
+    .table_in {
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+
+            @media (max-width:991px) {
+                margin-bottom: 0.3rem;
+                font-size: 1.6rem;
+            }
+        }
+
+        .rewardschatr_table {
+            :global {
+                .table-responsive {
+                  overflow-y: auto;
+                  height: 55rem;
+          
+                  thead {
+                    position: sticky;
+                    top: 0;
+                    tr {
+                        th {
+                            width: 40%;
+                        }
+                    }
+                  }
+                }
+              }   
+        }
+    }
+
+    .reward_note {
+        margin-bottom: 2rem;
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            @media (max-width:767px) {
+                font-size: 1.4rem;
+            }
+
+            // span {
+            //     font-weight: 400;
+            // }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@import '../../../assets/theme/_var.scss';
+
+.rewards {
+    .card_information {
+        :global {
+            .row {
+                row-gap: 1.5rem;
+            }
+        }
+    }
+
+    .rewards_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        @media (max-width:575px) {
+            display: block;
+        }
+
+        >div {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            h4 {
+                @media (max-width:991px) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            :global {
+                .reward_btn {
+                    padding: 1.3rem 2rem;
+                }
+
+                // :global {
+                .common-select {
+                    .react-select__control {
+                        width: 14rem;
+
+                        @media (max-width:767px) {
+                            padding: 1.1rem 1.5rem;
+                        }
+
+                        @media (max-width:490px) {
+                            width: 100%;
+                            margin: 1.5rem 0;
+                        }
+                    }
+                }
+
+                .reward_btn {
+                    @media (max-width:1679px) {
+                        padding: 1.3rem 2rem;
+                    }
+                }
+
+                // }
+            }
+
+            @media (max-width:575px) {
+                justify-content: space-between;
+                margin-top: 1rem;
+            }
+        }
+
+        .filters {
+            @media (max-width:575px) {
+                display: block;
+            }
+            .rewards_form {
+                display: flex;
+                align-items: flex-start;
+                gap: 2rem;
+
+                @media (max-width:991px) {
+                    gap: 0.6rem;
+                }
+
+                @media (max-width:575px) {
+                    margin-top: 1.5rem;
+                }
+
+                @media (max-width:490px) {
+                    display: block;
+                }
+
+                >div {
+                    &:first-child {
+                        margin-bottom: 0;
+
+
+                        :global {
+
+                            .inner {
+                                input {
+                                    padding: 1.3rem 2.5rem 1.3rem 5rem;
+                                    width: 23rem;
+
+
+                                    @media (max-width:767px) {
+                                        width: 17rem;
+                                        padding: 1.3rem 2.5rem 1.3rem 4rem;
+                                    }
+
+                                    @media (max-width:490px) {
+                                        width: 100%;
+                                    }
+                                }
+
+                                .icon {
+                                    left: 2.4rem;
+                                    right: unset;
+
+                                    @media (max-width:767px) {
+                                        left: 1.6rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .user_reward {
+        margin-top: 2.5rem;
+        .user_table{
+            tr{
+                td{
+                    a{
+                        color: rgba($white,0.8);
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        width: 17.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

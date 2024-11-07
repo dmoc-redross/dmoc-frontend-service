@@ -1,0 +1,97 @@
+@import "../../../../../assets/theme/_var.scss";
+
+.token_sec {
+  background-image: url(../../../../../assets/images/token_bg.png);
+  background-position: top center;
+  padding-bottom: 10.6rem;
+
+  @media (max-width: 1679px) {
+    padding-bottom: 7rem;
+  }
+  @media (max-width: 575px) {
+    padding-bottom: 4rem;
+  }
+
+  &_left {
+    // @media (max-width: 991px) {
+    //   max-width: 45rem;
+    //   margin: 0 auto;
+    // }
+
+    > div {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 47rem;
+      @media (max-width: 991px) {
+        max-width: 44rem;
+      }
+      @media (max-width: 575px) {
+        max-width: 24rem;
+      }
+    }
+  }
+
+  &_right {
+    padding-left: 8rem;
+
+    @media (max-width: 1439px) {
+      padding-left: 4rem;
+    }
+    @media (max-width: 991px) {
+      padding-left: 0;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 1.6rem;
+    }
+    p {
+      line-height: 2.6rem;
+      @media (max-width: 1439px) {
+        line-height: 2.2rem;
+      }
+      @media (max-width: 991px) {
+        line-height: 2rem;
+      }
+      @media (max-width: 767px) {
+        line-height: 1.8rem;
+      }
+    }
+    .token_btns {
+      margin-top: 5rem;
+      gap: 1.5rem;
+      @media (max-width: 991px) {
+        margin-top: 2.5rem;
+      }
+      @media (max-width: 767px) {
+        justify-content: center;
+        display: flex;
+      }
+      @media (max-width: 479px) {
+       flex-wrap: wrap;
+      }
+
+      .borderbtn {
+        // background: transparent;
+        border: 0.1rem solid $primary2;
+        // color: $primary2;
+        margin-left: 2rem;
+        margin-left: 10px;
+        @media (max-width: 991px) {
+          margin-left: 1rem;
+          padding: 0.75rem 1.5rem;
+        }
+        @media (max-width: 479px) {
+          margin-left: 0.6rem;
+          padding: 0.75rem 1.6rem;
+        }
+      }
+    }
+  }
+
+  :global {
+    .row {
+      align-items: center;
+    }
+  }
+}

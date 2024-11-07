@@ -1,0 +1,196 @@
+@import "../../../assets/theme/_var.scss";
+
+.dashboard {
+  &_in {
+    display: flex;
+    margin-right: -1.3rem;
+    margin-left: -1.3rem;
+
+    .col_8 {
+      flex: 0 0 calc(100% - 58.6rem);
+      padding-right: 1.3rem;
+      padding-left: 1.3rem;
+    }
+
+    .col_4 {
+      flex: 0 0 58.6rem;
+      flex-direction: column;
+      display: flex;
+      padding-right: 1.3rem;
+      padding-left: 1.3rem;
+      .social_card {
+        // height: 100%;
+        border-radius: 1.2rem;
+        border-top: 0.1rem solid rgba($primary, 0.5);
+        background: linear-gradient(
+          180deg,
+          rgba(19, 66, 157, 0.2) 0%,
+          rgba(45, 81, 203, 0.2) 105.86%
+        );
+        padding: 3.6rem 5.6rem;
+        @media (max-width: 1679px) {
+          padding: 3.1rem 3.6rem;
+          margin-bottom: 2.4rem;
+        }
+
+        @media (max-width: 767px) {
+          padding: 2rem 1.5rem;
+          margin-top: 2rem;
+        }
+        p {
+          font-size: 2.4rem;
+          @media (max-width: 767px) {
+            font-size: 1.6rem;
+          }
+        }
+        ul {
+          margin-top: 3rem;
+          @media (max-width: 767px) {
+            margin-top: 2rem;
+          }
+
+          li {
+            @media (max-width: 991px) {
+              &:not(:last-child) {
+                margin-right: 0.8rem;
+              }
+            }
+            a {
+              svg {
+                width: 6.2rem;
+                height: 6.2rem;
+                @media (max-width: 1679px) {
+                  width: 4.5rem;
+                  height: 4.5rem;
+                }
+                @media (max-width: 575px) {
+                  width: 3.5rem;
+                  height: 3.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1599px) {
+      .col_8 {
+        flex: 0 0 calc(100% - 36rem);
+      }
+
+      .col_4 {
+        flex: 0 0 36rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      display: block;
+
+      .col_8,
+      .col_4 {
+        flex: 0 0 100%;
+      }
+      .col_4 {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    @media (max-width: 767px) {
+      .col_4 {
+        flex-direction: column;
+        align-items: initial;
+      }
+    }
+  }
+  .skymarvel_card {
+    border-radius: 1.2rem;
+    border-top: 0.1rem solid rgba($primary, 0.5);
+    background: linear-gradient(
+      180deg,
+      rgba(19, 66, 157, 0.2) 0%,
+      rgba(45, 81, 203, 0.2) 105.86%
+    );
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      // margin-top: 2rem;
+    }
+    .skymarvel_inner {
+      width: 50% !important;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        padding-left: 1.5rem;
+        @media (max-width: 991px) {
+          padding: 2rem 1rem;
+        }
+        @media (max-width: 767px) {
+          padding: 2rem 1rem;
+        }
+      }
+      @media (max-width: 991px) {
+        padding: 2rem 1rem;
+      }
+      @media (max-width: 767px) {
+        width: 50% !important;
+        border-right: 0;
+      }
+      @media (max-width: 575px) {
+        width: 100% !important;
+      }
+      :global{
+        .copy_element_btn{
+          position: absolute;
+          top: -1.5rem;
+          right: 0;
+          background-color: red;
+          // button{
+           
+          // }
+        }
+      }
+      > div {
+        &:nth-child(1) {
+          @media (max-width: 991px) {
+            width: 4.5rem;
+            height: 4.5rem;
+            img {
+              width: 1.4rem;
+            }
+          }
+        }
+        &:nth-child(2) {
+          margin-left: 1.5rem;
+        }
+      
+      }
+      a {
+        @media (max-width: 991px) {
+          font-size: 1.2rem;
+          font-weight: 400;
+          > div {
+            right: -22px;
+          }
+        }
+      }
+
+      .copyClass {
+        @media (max-width: 991px) {
+          font-size: 1.12rem;
+          span {
+            width: 1.6rem;
+            height: 1.6rem;
+            right: -1.8rem;
+            svg {
+              width: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

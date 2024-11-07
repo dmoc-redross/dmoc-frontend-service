@@ -1,0 +1,134 @@
+@import "../../../assets/theme/_var.scss";
+
+.referral_list {
+  &_table {
+    th,
+    td {
+      &:last-child {
+        width: 11.6rem;
+        min-width: 11.6rem;
+      }
+    }
+  }
+  .transaction_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+    @media (max-width: 1679px) {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 1.2rem;
+    }
+    @media (max-width: 479px) {
+      display: block;
+    }
+    .title {
+      font-weight: 600;
+      line-height: 2.8rem;
+      font-size: 2.4rem;
+      color: $white;
+
+      @media (max-width: 575px) {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+    }
+    &_right {
+      @media (max-width: 479px) {
+        margin-top: 1.5rem;
+      }
+      :global {
+        .trans_datepicker {
+          width: 100%;
+          max-width: 29rem;
+          height: 5rem;
+          border: 0;
+          border-radius: 5rem;
+          padding: 1.4rem 2rem;
+          background-color: $secondary6;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          @media (max-width: 767px) {
+            max-width: 25rem;
+            height: 4.5rem;
+          }
+          .datepicker_fst {
+            width: 11.5rem;
+
+            .react-datepicker-wrapper {
+              input {
+                width: 100%;
+                border: 0;
+                background: transparent;
+                color: $white;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $white;
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+                @media (max-width: 767px) {
+                  font-size: 1.4rem;
+                }
+
+                &:focus {
+                  border: 0;
+                  outline: 0;
+                }
+              }
+              .react-datepicker__view-calendar-icon {
+                svg {
+                  font-size: 0;
+                  background-image: url("../../../assets/icons/calender.svg");
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  background-position: right;
+                  width: 1.6rem;
+                  height: 1.6rem;
+                  width: 1rem;
+                  height: 1rem;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  @media (max-width: 767px) {
+                    right: -5px;
+                    top: 2px;
+                  }
+                  path {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          span {
+            display: inline-flex;
+          }
+          .datepicker_sec {
+            padding-left: 1rem;
+            width: 14rem;
+            input {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .wallet_address {
+    a {
+      color: $white;
+      width: 16rem;
+      @media (max-width:991px) {
+        width: 15rem;
+      }
+      @media (max-width:575px) {
+        width: 12.5rem;
+      }
+    }
+  }
+}

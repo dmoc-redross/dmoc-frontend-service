@@ -1,0 +1,116 @@
+@import "../../../../../assets/theme/_var.scss";
+
+.faq {
+  background-image: url(../../../../../assets/images/faq_right_bg.png),
+    url(../../../../../assets/images/faq_left_bg.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat, no-repeat;
+  padding-bottom: 10.6rem;
+
+  @media (max-width: 1679px) {
+    padding-bottom: 7rem;
+  }
+
+  @media (max-width: 1439px) {
+    background-size: 7.5rem 35rem, 7.5rem 35rem;
+    background-position: right center, left center;
+  }
+
+  @media (max-width: 575px) {
+    padding-bottom: 4rem;
+  }
+
+  :global {
+    .accordion {
+      background-color: transparent;
+      max-width: 127.4rem;
+      margin: 0 auto;
+
+      @media (max-width: 1679px) {
+        max-width: 100rem;
+      }
+
+      @media (max-width: 1439px) {
+        max-width: 80rem;
+      }
+
+      .accordion-item {
+        background-color: $secondary;
+        border: 0.1rem solid $secondary;
+        color: $white;
+        border-radius: 1.2rem;
+        padding: 2.825rem 5rem;
+
+        @media (max-width: 1679px) {
+          padding: 2.2rem 4rem;
+        }
+
+        @media (max-width: 1439px) {
+          padding: 1.5rem 3rem;
+        }
+
+        @media (max-width: 575px) {
+          padding: 1.5rem 2rem;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+
+          @media (max-width: 1679px) {
+            margin-bottom: 1.8rem;
+          }
+
+          @media (max-width: 1439px) {
+            margin-bottom: 1.5rem;
+          }
+
+          @media (max-width: 575px) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .accordion-button {
+        padding: 0;
+        background-color: transparent;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $white;
+
+        @media (max-width: 1439px) {
+          font-size: 1.6rem;
+        }
+
+        &:not(.collapsed),
+        &:focus {
+          box-shadow: unset;
+        }
+
+        &::after {
+          --bs-accordion-btn-icon-width: 1.8rem;
+          background-image: url(../../../../../assets/icons/down-icon.svg);
+
+          @media (max-width: 1439px) {
+            --bs-accordion-btn-icon-width: 1.4rem;
+          }
+
+          @media (max-width: 575px) {
+            --bs-accordion-btn-icon-width: 1.2rem;
+          }
+        }
+      }
+
+      .accordion-body {
+        padding: 1.7rem 0 0;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+
+        @media (max-width: 1439px) {
+          padding: 1.2rem 0 0;
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../assets/theme/_var.scss";
+
+.wallet_add {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  @media (max-width: 575px) {
+    margin-top: 1rem;
+  }
+  h6 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $white;
+
+    @media (max-width: 575px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  &__inner {
+    margin-top: 0;
+
+    h6 {
+      text-align: left;
+      color: rgba($white, 0.8);
+    }
+    strong {
+      margin-top: 0.3rem;
+      display: block;
+      color: $white;
+    }
+  }
+  &__icon {
+    margin-right: 0.85rem;
+    flex-shrink: 0;
+    img {
+      width: 3.7rem;
+      height: 3.7rem;
+      @media (max-width: 575px) {
+        width: 3rem;
+        height: 3rem;
+      }
+      @media (max-width: 479px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../../assets/theme/_var.scss";
+
+.links {
+  p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.1rem;
+
+    @media (max-width: 767px) {
+      margin-top: 1.5rem;
+    }
+
+    li {
+      a {
+        cursor: pointer;
+        &:after {
+          background: none;
+        }
+
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}

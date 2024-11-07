@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// font families
+$basefont: "Montserrat", sans-serif;
+
+// colors
+
+$baseclr: rgba(5, 5, 32, 1);
+$white: white;
+$black: black;
+$whiteD9: #d9d9d9;
+$whiteD8: #d8d8d8;
+$whiteF0: #f0f0f0;
+$green: rgba(0, 225, 77, 1);
+$whiteD1D3D4: #d1d3d4;
+$grey89: #999;
+$red: #f00;
+$lightred: #f9837c;
+$whiteDC: #dcdcdc;
+$lightgrey: #70b6c1;
+$yelow: #fabc0a;
+$lightyellow: #ffd72b;
+$textClr: #1d2d67;
+$primary: #f5da76;
+$primary2: #e4c36a;
+$secondary: #2e4484;
+$secondary2: #232323;
+$secondary3: #081742;
+$secondary4: #727272;
+$secondary5: #292c2e;
+$secondary6: #13429d;
+$secondary7: #0e3485;
+$secondary8: #0c1c5a;
+
+$borderClr: #262626;
+$borderClr2: #252525;
+$borderClr3: #d3dbf1;
+
+$red2: #f66;
+$darkred: #f00;
+$lightblue: #a5d7fe;
+$lightwhite: #d7def4;
+$baseyellow: #f5da76;
+$white55: #556aa1;
+$baseblueclr: #13307d;
+$basebgGradient: linear-gradient(
+  180deg,
+  rgba(19, 66, 157, 0.2) 0%,
+  rgba(45, 81, 203, 0.2) 105.86%
+);
+$radialGradientBG: radial-gradient(
+  148.24% 134.66% at 59.24% 142.89%,
+  rgba(0, 85, 193, 0.5) 0%,
+  rgba(10, 111, 228, 0.5) 18%,
+  rgba(0, 67, 156, 0.5) 45.5%,
+  rgba(29, 51, 130, 0.5) 100%
+);
+
+$btnGradient: linear-gradient(9deg, #f6db79 4.52%, #8f5322 121%);
+$gradient: linear-gradient(178.69deg, #72c7ff -17.21%, #24419f 109.3%);
+$boxShadow: 0 1.2rem 1.6rem -0.4rem rgba(255, 255, 255, 0.2),
+  0 0.4rem 0.6rem -0.2rem rgba(255, 255, 255, 0.15);
+$boxShadow2: 0 1rem 1.4rem rgba(255, 255, 255, 0.06);
+$boxShadow3: inset 3px 17px 37px rgba(3, 3, 3, 0.6),
+  inset 0px 0px 5px rgba(255, 255, 255, 0.1);
+
+// z indexes
+$header: 988;
+$sidebar: $header + 3;
+$sidebar_overlay: $sidebar - 2;
+$modal: 1056;
+$loader: 1090;
+
+%card {
+  border-radius: 1.6rem;
+  border: 1px solid rgba($white, 0.2);
+  background: linear-gradient(
+    91deg,
+    rgba($white, 0.04) -1.1%,
+    rgba($white, 0.06) 111.28%
+  );
+}
+
+// gradients

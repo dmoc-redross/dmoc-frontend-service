@@ -1,0 +1,145 @@
+@import "../../../assets/theme/_var.scss";
+
+.home_footer {
+  background-image: url(../../../assets/images/footer_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+  z-index: 1;
+  // border: 0.1rem solid;
+  // border-image-source: linear-gradient(
+  //   120.68deg,
+  //   #999999 3.05%,
+  //   #27388e 19.2%,
+  //   #26378d 84.3%,
+  //   #999999 96.92%
+  // );
+
+  @media (max-width: 767px) {
+    background-size: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #4878bc 0%, rgba(5, 5, 32, 0) 100%);
+    z-index: -1;
+  }
+
+  &_layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.2rem 0 2rem;
+
+    @media (max-width: 1679px) {
+      padding: 3rem 0 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &_left {
+    margin-right: 1.5rem;
+    @media (max-width: 991px) and (min-width: 768px) {
+      max-width: 50%;
+    }
+    @media (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 1.6rem;
+      @media (max-width: 1679px) {
+        margin-bottom: 1.2rem;
+        font-size: 2.8rem;
+      }
+      @media (max-width: 1439px) {
+        font-size: 2.2rem;
+      }
+    }
+    p {
+      color: $whiteF0;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+
+      @media (max-width: 1679px) {
+        margin-bottom: 2rem;
+      }
+      @media (max-width: 767px) {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    :global {
+      .invest-btn {
+        font-size: 1.4rem;
+        padding: 0.95rem 2.6rem;
+      }
+    }
+  }
+
+  &_right {
+  }
+}
+
+.footer_links {
+  p {
+    font-size: 2.8rem;
+
+    @media (max-width: 1679px) {
+      font-size: 2.4rem;
+    }
+    @media (max-width: 1439px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 767px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  ul {
+    margin-top: 3rem;
+    @media (max-width: 1679px) {
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 1439px) {
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 767px) {
+      max-width: 20rem;
+      margin: 1rem auto 0;
+    }
+
+    li {
+      gap: 2.8rem;
+      @media (max-width: 1679px) {
+        gap: 2rem;
+      }
+
+      @media (max-width: 1439px) {
+        gap: 1.5rem;
+      }
+
+      a {
+        svg {
+          width: 5.6rem;
+          height: 5.6rem;
+          @media (max-width: 1679px) {
+            width: 4.2rem;
+            height: 4.2rem;
+          }
+        }
+      }
+    }
+  }
+}

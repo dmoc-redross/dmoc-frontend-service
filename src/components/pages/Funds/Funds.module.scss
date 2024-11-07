@@ -1,0 +1,84 @@
+@import "../../../assets/theme/_var.scss";
+
+.funds {
+  display: flex;
+  flex-direction: column;
+
+  &_top {
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 2.4rem;
+    position: relative;
+
+    @media (max-width: 1679px) {
+      margin-bottom: 1.8rem;
+      gap: 1.8rem;
+    }
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+
+    &_left {
+      flex-grow: 1;
+      @media (max-width: 1919px) {
+        flex-basis: 62.2rem;
+        max-width: 62.2rem;
+      }
+
+      @media (max-width: 1679px) {
+        flex-basis: 55rem;
+        max-width: 55rem;
+      }
+      @media (max-width: 1439px) {
+        flex-basis: 40rem;
+        max-width: 40rem;
+      }
+    }
+
+    &_mid {
+      flex-basis: 58.6rem;
+      max-width: 58.6rem;
+      @media (max-width: 1439px) {
+        flex-basis: 42rem;
+        max-width: 42rem;
+      }
+    }
+
+    &_left,
+    &_mid {
+      align-self: stretch;
+
+      @media (max-width: 991px) {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      @media (max-width: 575px) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &_nftImg {
+    position: relative;
+    right: -3.5rem;
+    margin-left: auto;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+
+.future_timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  @media (max-width: 479px) {
+    gap: 0.8rem;
+  }
+}
